@@ -47,7 +47,8 @@ The Zerovault contract manages collateralized tokens, allowing users to mint tok
 #### Installation 
 
 ```
-git clone [repo-name] && cd repo_name 
+git clone https://github.com/ACS-Society/ZeroVault
+cd ZeroVault
 forge build
 ```
 
