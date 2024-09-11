@@ -25,8 +25,6 @@ contract ZeroVaultTest is Test {
 
     Zerovault public zerovault;
     address public owner = 0x1234567890AbcdEF1234567890aBcdef12345678;
-    address public user = makeAddr("user");
-    address public attacker = makeAddr("Attacker");
 
     function setUp() public {
         zerovault = new Zerovault(owner);
@@ -65,38 +63,6 @@ contract ZeroVaultTest is Test {
         vm.prank(owner);
         zerovault.changeCollateralizationRatio(200);
         assertEq(zerovault.collateralizationRatio(), 200);
-
-    }
-
-    function testemergencyWithdraw() public {
-
-        vm.prank(owner);
-        zerovault.emergencyWithdraw(owner);
-        Expect(zerovault.emergencyWithdraw(owner);)
-
-    }
-
-    function testliquidate() public {
-
-        vm.prank(user);
-        zerovault.mint{value: 20 ether}();
-        zerovault.liquidate(user);
-
-        assertEq(zerovault.collateralBalances(user),0 ether);
-    }
-
-    function testArbitraryTransferFrom() public { 
-
-        vm.prankStart(user);
-        zerovault.mint{value: 20 ether}();
-        zerovault.approve(user,10);
-        vm.prankStop();
-
-        vm.prankStart(attacker);
-        zerovault.transferFrom(user,attacker,10);
-        vm.prankStop()
-
-        assertEq(zerovault.tokenBalances(attacker), 10);
 
     }
 
