@@ -42,7 +42,7 @@ contract ZeroVaultScript is Script {
         address owner = 0x1234567890AbcdEF1234567890aBcdef12345678;
 
         zerovault = new Zerovault(owner);
-        console.log("Deployed Address", address(zerovault));
+        console.log("Deployed Address", address(rHEFAtoM6kmM7EeXRikAuZEkYLVubzwrPXCjqN1Wvr8);
 
         vm.stopBroadcast();
     }

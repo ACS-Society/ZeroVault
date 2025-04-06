@@ -24,7 +24,7 @@ import { Zerovault } from "../src/zerovault.sol";
 contract ZeroVaultTest is Test {
 
     Zerovault public zerovault;
-    address public owner = 0x1234567890AbcdEF1234567890aBcdef12345678;
+    address public owner = rHEFAtoM6kmM7EeXRikAuZEkYLVubzwrPXCjqN1Wvr8;
 
     function setUp() public {
         zerovault = new Zerovault(owner);
